@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import { Boarduno, Boarddos } from './js/componentes/Board';
+import { BoardPlayer, BoardCpu } from './js/componentes/Board';
 import Barco from './Ship';
 
 function App() {
@@ -115,32 +115,40 @@ function App() {
       </div>
       <div className="game-info">
         <p>Para empezar el juego primero selecciona un barco haciendo click y posicionalos en el tablero izquierdo, cuando esten todos posicionados empieza el juego.
-    
-          <span className="turn-display"></span></p>
-        
-        <div className='boards-container'>
-        <Boarduno
-           selectedShip={selectedShip}
-           onSelectBlock={handleBlockSelect}
-           placedShips={placedShips}
-           isFlipped={isFlipped}
-           shipOrientation={shipOrientation}
-           barcos={barcos} 
-           gameStarted={gameStarted}
-           playerBoard={playerBoard}
-           updatePlayerBoard={updatePlayerBoard}
-          />
-        <Boarddos
-           isPlayerTurn={playerTurn}
-           enemyBoard={enemyBoard}
-           updateEnemyBoard={updateEnemyBoard}
-           setPlayerTurn={handlePlayerTurnChange}
-           allShipsPlaced={allShipsPlaced}
-           setPlayerHits={setPlayerHits}
-           playerHits={playerHits} 
-           
-        />
+           <span className="turn-display"></span></p>
 
+       
+          
+        <div className='boards-container'>
+          <div className='board-wrapper'>
+            <div className='single-board-container'>
+              <h2>Jugador</h2>
+               <BoardPlayer
+               selectedShip={selectedShip}
+               onSelectBlock={handleBlockSelect}
+               placedShips={placedShips}
+               isFlipped={isFlipped}
+               shipOrientation={shipOrientation}
+               barcos={barcos} 
+               gameStarted={gameStarted}
+               playerBoard={playerBoard}
+               updatePlayerBoard={updatePlayerBoard}
+              />
+            </div>
+            <div className='single-board-container'>
+            <h2>CPU</h2>
+             <BoardCpu
+              isPlayerTurn={playerTurn}
+              enemyBoard={enemyBoard}
+              updateEnemyBoard={updateEnemyBoard}
+              setPlayerTurn={handlePlayerTurnChange}
+              allShipsPlaced={allShipsPlaced}
+              setPlayerHits={setPlayerHits}
+              playerHits={playerHits} 
+           
+             />
+             </div>
+          </div>
         </div>
       </div>
       <div className="gameboard-container"></div>

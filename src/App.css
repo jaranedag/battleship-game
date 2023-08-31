@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-evenly;
   margin-left: 2px;
+  text-align: center;
+  margin: 10px;
 }
 
 .option-container {
@@ -87,3 +89,12 @@
   transform: rotate(90deg);
 }
 
+.board-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.single-board-container {
+  text-align: center;
+  margin: 10px;
+}

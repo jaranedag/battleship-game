@@ -5,7 +5,7 @@ import Barco from "../../Ship";
 
 
 
-export function Boarduno({ selectedShip, onSelectBlock, placedShips, isPlayerTurn, shipOrientation, playerBoard,setPlayerTurn, updatePlayerBoard   }) {
+export function BoardPlayer({ selectedShip, onSelectBlock, placedShips, isPlayerTurn, shipOrientation, playerBoard,setPlayerTurn, updatePlayerBoard   }) {
     const width = 10;
     const totalBlocks = width * width;
     const [board, setBoard] = useState(Array(totalBlocks).fill(null));
@@ -73,7 +73,7 @@ export function Boarduno({ selectedShip, onSelectBlock, placedShips, isPlayerTur
     );
 }
 
-export function Boarddos({ isPlayerTurn, enemyBoard, updateEnemyBoard, allShipsPlaced ,setPlayerTurn, playerHits, setPlayerHits }) {
+export function BoardCpu({ isPlayerTurn, enemyBoard, updateEnemyBoard, allShipsPlaced ,setPlayerTurn, playerHits, setPlayerHits }) {
     const width = 10;
     const totalBlocks = width * width;
   
