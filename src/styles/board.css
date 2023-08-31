@@ -1,0 +1,46 @@
+.game-board-uno {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(203, 185, 231);
+  border: 1px rgb(153, 35, 35) solid;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); 
+  cursor: pointer;
+
+}
+
+.game-board-dos {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(185, 231, 191);
+  border: 1px rgb(153, 35, 35) solid;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  cursor: pointer;
+
+}
+
+.block{
+  width: 20px;
+  height: 20px;
+  border: 1px rgb(109, 103, 103) solid;
+  box-sizing: border-box;
+}
+
+.ship-block {
+  background-color: rgb(85, 85, 88); 
+}
+
+.taken{
+  background-color: rgb(185, 231, 191);
+}
+
+
+
+.block.hit {
+  background-color: red; /* Cambia el color a rojo para un disparo exitoso */
+}
+
+.block.miss {
+  background-color: gray; /* Cambia el color a gris para un disparo fallido */
+}
