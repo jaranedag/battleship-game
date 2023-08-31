@@ -114,8 +114,8 @@ function App() {
         <h1>Batalla Naval</h1>
       </div>
       <div className="game-info">
-        <p>Instrucciones: Para empezar el juego primero debes posicionar todos los barcos en tu tablero,
-          el primero que hunda todos los barcos gana. Suerte!
+        <p>Para empezar el juego primero selecciona un barco haciendo click y posicionalos en el tablero izquierdo, cuando esten todos posicionados empieza el juego.
+    
           <span className="turn-display"></span></p>
         
         <div className='boards-container'>
