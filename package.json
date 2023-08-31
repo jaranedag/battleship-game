@@ -1,6 +1,6 @@
 {
   "homepage": "http://jaranedag.github.io/battleship-game",
-  "name": "battleship_araneda",
+  "name": "battleship-game",
   "version": "0.1.0",
   "private": true,
     "dependencies": {
